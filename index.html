@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Himanshu Sahu | Frontend Developer Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+<header>
+  <h1>Himanshu Sahu</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am Himanshu Sahu, a Frontend Developer (BCA, Galgotias University) passionate about professional, responsive, motion-enhanced websites using HTML, CSS, JavaScript, and modern frameworks with motion graphics integration.</p>
+    <button onclick="window.open('img/My Resume .pdf.pdf')">Download Resume</button>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-bar">
+      <p>HTML</p>
+      <div class="bar"><div class="fill html"></div></div>
+      <p>CSS</p>
+      <div class="bar"><div class="fill css"></div></div>
+      <p>JavaScript</p>
+      <div class="bar"><div class="fill js"></div></div>
+      <p>React</p>
+      <div class="bar"><div class="fill react"></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <section id="projects">
+    <div class="project-card" onclick="window.open('https://fashionfeast.shop','_blank')">
+      <img src="img/fashionfeast.png" alt="FashionFeast.shop">
+      <h3>FashionFeast.shop</h3>
+      <p>A live e-commerce platform with chatbot integration, clean UI, and responsive design, showcasing your frontend and design skills.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x180.png?text=Animated+Portfolio" alt="Animated Portfolio">
+      <h3>Animated Portfolio</h3>
+      <p>A personal portfolio project using motion graphics and Lottie animations to showcase frontend projects professionally with animations.</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/300x180.png?text=Task+Manager+UI" alt="Task Manager UI">
+      <h3>Task Manager UI</h3>
+      <p>A clean, mobile-responsive task manager interface designed with modern CSS and JavaScript animations for smooth user experience.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>“Himanshu delivered a highly responsive portfolio site with clean animations and intuitive navigation.”</p>
+        <strong>- Client A</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>“His frontend skills in JavaScript and animation integration enhanced our project significantly.”</p>
+        <strong>- Client B</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: himanshu@example.com</p>
+  </section>
+</main>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section);
+});
+</script>
+</body>
+</html>
